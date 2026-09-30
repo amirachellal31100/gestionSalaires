@@ -9,14 +9,28 @@ package gestionsalaires;
  * @author maxim
  */
 public class Developpeur extends Employe{
+    protected String language;
 
-    public Developpeur (String nom, String prenom, int anciennete) {
+    public Developpeur (String nom, String prenom, int anciennete, String language) {
         super(nom, prenom, anciennete,"developpeur");
-        
+        this.language=language;
     }
     
+    public int getprime(){
+        int prime=0;
+        if (language=="python")
+            prime=prime+70;
+        else if (language=="java")
+            prime=prime=50;
+        else if (language=="php")
+            prime=prime+45;
+        return prime;
+    }
     public int getSalaire(){
-        return (1900+anciennete*100);
+        return (getprime()+1900+anciennete*100);
+    }
+    public String getDescription(){
+        return nom+" "+prenom+" est "+poste+" depuis "+anciennete+" ans, connais " + language + " et gagne " +getSalaire()+" €.";
     }
 }
    

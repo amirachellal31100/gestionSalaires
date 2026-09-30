@@ -15,11 +15,14 @@ public class GestionSalaires {
      */
     public static void main(String[] args) {
         // Tests applicatifs
-        Developpeur d = new Developpeur("Durand", "Michel",4);
+        Developpeur d = new Developpeur("Durand", "Michel",4,"php");
         Manager m = new Manager("Dupont", "Lucie", 2);
+        Administratif a = new Administratif ("CHELLAL", "Amira", 2);
         
         System.out.println(d.getDescription());
         System.out.println(m.getDescription());
+        System.out.println(a.getDescription());
+        
     }
     
 }
