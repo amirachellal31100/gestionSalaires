@@ -18,10 +18,12 @@ public class GestionSalaires {
         Developpeur d = new Developpeur("Durand", "Michel",4,"php");
         Manager m = new Manager("Dupont", "Lucie", 2);
         Administratif a = new Administratif ("CHELLAL", "Amira", 2);
+        developpeurExpert k = new developpeurExpert("BENAMEUR", "kheira","php",1);
         
         System.out.println(d.getDescription());
         System.out.println(m.getDescription());
         System.out.println(a.getDescription());
+        System.out.println(k.getDescription());
         
     }
     
